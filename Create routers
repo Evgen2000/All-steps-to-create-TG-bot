@@ -1,0 +1,22 @@
+from aiogram.types import Message
+from aiogram.filters import CommandStart, Command
+from aiogram import F, Router
+
+
+router = Router()
+
+
+@router.message(CommandStart())
+async def cmd_start(message: Message):
+    await message.answer('Привет!')
+    await message.reply('Как дела?')
+
+
+@router.message(Command('help'))
+async def cmd_help(message: Message):
+    await message.answer('Вам нужна помощь? Напишите - да')
+
+
+@router.message(F.text == 'да')
+async def nice(message: Message):
+    await message.answer('Ща разберемся, я вас слушаю')

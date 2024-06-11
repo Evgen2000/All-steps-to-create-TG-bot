@@ -20,3 +20,5 @@ async def cmd_help(message: Message):
 @router.message(F.text == 'да')
 async def nice(message: Message):
     await message.answer('Ща разберемся, я вас слушаю')
+
+

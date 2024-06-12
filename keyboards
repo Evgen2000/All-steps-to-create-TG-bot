@@ -6,8 +6,7 @@ main = ReplyKeyboardMarkup(
     keyboard=[
         [KeyboardButton(text='Каталог')],  # Кнопка "Каталог"
         [KeyboardButton(text='Корзина')],  # Кнопка "Корзина"
-        [KeyboardButton(text='Контакты')],  # Кнопка "Контакты"
-        [KeyboardButton(text='О нас')]  # Кнопка "О нас"
+        [KeyboardButton(text='Контакты'), KeyboardButton(text='О нас')]  # Кнопка "О нас"
     ],
     resize_keyboard=True,  # Уменьшаем размер клавиатуры для более удобного отображения
     input_field_placeholder='Выберите пункт меню'  # Текст подсказки в поле ввода
